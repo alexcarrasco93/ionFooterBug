@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Input error in Ion Footer when compiled
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)=populateInput()>Populate inputs with large text</button>
+  <div>This input works fine and when you tap it the cursor goes to the end and you can scroll inside the input</div>
+  <ion-item>
+      <ion-label color="primary" floating>Working button!</ion-label>
+      <ion-input [(ngModel)]="code"></ion-input>
+    </ion-item>
+    <br><div>If you are in android you will be able to scroll inside the input but still doesn't place the cursor at the end, ios have both problems.</div>
+</ion-content>
+
+<ion-footer>
+  <!-- Input HTML -->
+  <ion-toolbar>
+    <div>This input its cursor doesn't go to the end when you tap it and neither has scroll inside the input</div>
+    <ion-item>
+      <ion-label color="primary" floating>No working button!</ion-label>
+      <ion-input [(ngModel)]="code"></ion-input>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
